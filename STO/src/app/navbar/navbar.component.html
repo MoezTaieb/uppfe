@@ -1,0 +1,79 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+  <img height= "70px" width="100px" src="./assets/img/qd.png"/>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" *ngIf="isLoggedIn">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/token']" *ngIf="isLoggedIn">Add STO</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" [routerLink]="['/market']" *ngIf="isLoggedIn"    >Market place </a>
+        </li>
+      </ul>
+       <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+            <button class="btn btn-danger active btn-block btn-round" [routerLink]="['/login']" *ngIf="!isLoggedIn" >Login</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-danger active btn-block btn-round" [routerLink]="['inscription']" *ngIf="!isLoggedIn" >Register</button>
+        </li>
+        <div align="right">
+        <li class="nav-item">
+            <button class="btn btn-danger active btn-block btn-round" (click)="onLogout()" *ngIf="isLoggedIn">Logout</button>
+        </li>
+        </div>
+        
+      
+      </ul>
+    </div>
+  </nav> --><div class="dashboard-header">    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >  
+      
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+       <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+       <div class="logo">
+       <ul class="nav navbar-nav navbar-nav ml-auto navbar-center main_menu onepage_nav">
+       <li style="padding-left:30px">
+       <a href="http://www.talan.tn/" target="_blank"> <img height= "70px" width="100px" src="./assets/img/talan.png"/></a>
+       </li>
+       <li class="nav-item" style="padding-left:70px">
+          <a class="nav-link" [routerLink]="['/token']" *ngIf="isLoggedIn">Add STO</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" [routerLink]="['/market']" *ngIf="isLoggedIn"    >Market place </a>
+        </li>
+      
+       </ul>
+       </div>
+       <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="nav navbar-nav navbar-right navbar-nav ml-auto navbar-center main_menu onepage_nav">
+            
+            <li class="nav-item" style="padding-right:5px" > 
+                <button class="btn btn-danger active btn-block btn-round" [routerLink]="['/login']" *ngIf="!isLoggedIn" >Login</button>
+            </li>
+            <!-- <ul class="nav navbar-nav">
+                <li><a href="#trash" role="tab" data-toggle="tab">Admin</a>
+                </li>
+            </ul> -->
+            <li class="nav-item" style="padding-right:5px">
+                <button class="btn btn-danger active btn-block btn-round" [routerLink]="['inscription']" *ngIf="!isLoggedIn" >Register</button>
+            </li>
+            <li class="nav-item" style="padding-right:5px">
+                <button class="btn btn-danger active btn-block btn-round" (click)="onLogout()" *ngIf="isLoggedIn">Logout</button>
+            </li>
+              
+            
+            </ul>
+     </div>
+        <!-- /.navbar-collapse -->
+        
+    <!-- /.container-fluid -->
+</nav>
+</div>

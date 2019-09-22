@@ -1,0 +1,69 @@
+<div class="wrapper">
+
+
+     
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register bg-dark">
+                         
+                       
+                        <form class="register-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()" >
+                          
+                            <label>Full name</label>
+                            <div class="input-group form-group-no-border" >
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-single-02"></i>
+                                </span>
+                              </div>
+
+                                <input type="text"  formControlName="fullName"    class="form-control" placeholder="Full name" (focus)="focus=true" (blur)="focus=false" id="fullName" >
+                            </div>
+
+                            <label>Email</label>
+                            <div class="input-group form-group-no-border"  [ngClass]="{'input-group-focus':focus===true}">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-email-85"></i>
+                                </span>
+                              </div>
+
+                                <input type="text" class="form-control" formControlName="email"  name="email" [(ngModel)]="userService.selectedUser.email" placeholder="Email" (focus)="focus=true" (blur)="focus=false" id="email" >
+                            </div>
+
+                            <label>Password</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-key-25"></i>
+                                </span>
+                              </div>
+                                <input type="password" class="form-control"  formControlName="password" name="password"  [(ngModel)]="userService.selectedUser.password"  placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" id="password"  >
+                            </div>
+
+
+                            <label>Wallet Adress</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-credit-card"></i>
+                                </span>
+                              </div>
+                                <input type="text" class="form-control"  formControlName="address"  name="address"  placeholder="Wallet address" (focus)="focus1=true" (blur)="focus1=false" id="Wallet-Address"  >
+                            </div>
+                            <button class="btn btn-danger active btn-block btn-round" >Sign up</button>
+               
+                        </form>
+
+                          
+
+
+
+                    </div>
+                  </div>
+              </div>
+              
+          </div>
+  
+</div>
